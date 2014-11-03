@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		99F2E2821A035B36002734EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F2E2811A035B36002734EE /* main.m */; };
+		99F2E28A1A035C2F002734EE /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F2E2891A035C2F002734EE /* Task.m */; };
+		99F2E2901A037DD7002734EE /* ThreadPoolManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F2E28F1A037DD7002734EE /* ThreadPoolManage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		99F2E27E1A035B36002734EE /* MulitThread */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MulitThread; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2E2811A035B36002734EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99F2E2881A035C2F002734EE /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		99F2E2891A035C2F002734EE /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		99F2E28E1A037DD7002734EE /* ThreadPoolManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadPoolManage.h; sourceTree = "<group>"; };
+		99F2E28F1A037DD7002734EE /* ThreadPoolManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadPoolManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				99F2E2811A035B36002734EE /* main.m */,
+				99F2E2881A035C2F002734EE /* Task.h */,
+				99F2E2891A035C2F002734EE /* Task.m */,
+				99F2E28E1A037DD7002734EE /* ThreadPoolManage.h */,
+				99F2E28F1A037DD7002734EE /* ThreadPoolManage.m */,
 			);
 			path = MulitThread;
 			sourceTree = "<group>";
@@ -118,7 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F2E28A1A035C2F002734EE /* Task.m in Sources */,
 				99F2E2821A035B36002734EE /* main.m in Sources */,
+				99F2E2901A037DD7002734EE /* ThreadPoolManage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +214,7 @@
 		99F2E2861A035B36002734EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +222,7 @@
 		99F2E2871A035B36002734EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
