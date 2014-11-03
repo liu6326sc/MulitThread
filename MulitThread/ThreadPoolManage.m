@@ -7,6 +7,7 @@
 //
 
 #import "ThreadPoolManage.h"
+
 static ThreadPoolManage * instance;
 @implementation ThreadPoolManage
 + (instancetype)shareManage
