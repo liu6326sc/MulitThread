@@ -12,7 +12,8 @@ static ThreadPoolManage * instance;
 @implementation ThreadPoolManage
 + (instancetype)shareManage
 {
-    if (!instance) {
+    if (!instance)
+    {
         instance = [[ThreadPoolManage alloc]init];
     }
 
@@ -24,7 +25,8 @@ static ThreadPoolManage * instance;
         return;
     }
     else{
-        switch (priorty) {
+        switch (priorty)
+        {
             case PRIORITY_HIGH:
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), block);
                 break;
@@ -44,7 +46,8 @@ static ThreadPoolManage * instance;
 }
 - (void)taskOnMainThread:(void(^)(void)) block
 {
-    if (!block) {
+    if (!block)
+    {
         return;
     }
     else{
@@ -53,11 +56,13 @@ static ThreadPoolManage * instance;
 }
 - (void)addSELTaskWithTarget:(id)obj withPriorty:(PRIORTY)priorty withSEL:(SEL)sel;
 {
-    if ([obj respondsToSelector:sel]) {
+    if ([obj respondsToSelector:sel])
+    {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^(void){
             [obj performSelector:sel];
         });
-        switch (priorty) {
+        switch (priorty)
+        {
             case PRIORITY_HIGH:
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,0), ^(void){
                     [obj performSelector:sel];
