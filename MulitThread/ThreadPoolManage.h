@@ -14,7 +14,7 @@ typedef enum
     PRIORITY_DEFAULT,
     PRIORITY_LOW
 }PRIORTY;
-enum{sun,mon,tue,wed,thu,fri,sat}asd,b,c;
+
 @interface ThreadPoolManage : NSObject
 
 /**
